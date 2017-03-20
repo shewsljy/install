@@ -2,9 +2,12 @@
 平台环境：ubuntu 16.04
 
 涉及：
-1. atom
-2. httpd
-3. nginx
-4. tomcat
-5. svn
-6. git
+- 编辑器
+    - atom
+- 服务器
+    - httpd
+    - nginx
+    - tomcat
+- 版本控制器
+    - svn
+    - git
