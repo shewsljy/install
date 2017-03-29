@@ -28,3 +28,21 @@ sudo make
 sudo make test
 sudo make install
 ```
+5. 配置
+    1. 使用slappasswd生成密文密码
+    ```
+    sudo /usr/local/openldap/sbin/slappasswd
+    New password: she1qaz@WSX
+    Re-enter new password: she1qaz@WSX
+    {SSHA}qKnuqI1ULg5xAL48COeB9E1AGB8Oncg2
+    ```
+    2. 修改配置
+    ```
+    sudo vi /usr/local/openldap/etc/openldap/slapd.ldif
+    dn: olcDatabase=mdb,cn=config
+    objectClass: olcDatabaseConfig
+    objectClass: olcMdbConfig
+    olcDatabase: mdb
+    olcSuffix: dc=lijiayu,dc=me
+    olcRootDN: cn=Manager,dc=lijiayu,dc=me`
+    ```
